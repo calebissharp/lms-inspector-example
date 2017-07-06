@@ -19,9 +19,9 @@ export class Uploader extends Component {
 
   render() {
     return (
-      <div className="Uploader">
-        <Dropzone onDrop={this.onDrop} />
-      </div>
+      <Dropzone onDrop={this.onDrop} className="Uploader">
+        <p className="Uploader-text">Drag or click here to upload files.</p>
+      </Dropzone>
     );
   }
 }
