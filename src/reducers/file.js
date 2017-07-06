@@ -2,8 +2,9 @@ import { fromJS } from 'immutable';
 import * as fileActions from '../actions/file';
 
 const initialState = fromJS({
-
-})
+  file: '',
+  filename: '',
+});
 
 const file = (state = initialState, action) => {
   switch(action.type) {
