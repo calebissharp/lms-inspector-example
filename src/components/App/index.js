@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Col, Grid, Row } from 'react-bootstrap';
-import logo from './logo.svg';
+import { Button, Col, Row } from 'react-bootstrap';
 import './index.css';
 
 import Uploader from '../Uploader';

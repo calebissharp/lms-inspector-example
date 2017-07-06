@@ -1,4 +1,4 @@
-import { call, put, takeEvery, takeLatest } from 'redux-saga/effects'
+import { call, put, takeLatest } from 'redux-saga/effects'
 
 import { FileInspector } from '../util/fileInspector';
 import * as fileActions from '../actions/file';
