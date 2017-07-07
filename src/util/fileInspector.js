@@ -8,11 +8,8 @@ export const FileInspector = {
       .then(buffer => {
         const compression = FileInspector.determineCompression(buffer);
 
-        if (compression === 'zip') {
-          return FileInspector.uncompressZip(buffer)
-        } else if (compression === 'gzip') {
-          return FileInspector.uncompressGzip(buffer)
-        }
+        if (compression === 'zip') return FileInspector.uncompressZip(buffer);
+        if (compression === 'gzip') return FileInspector.uncompressGzip(buffer);
       })
       .then(FileInspector.checkForLMS)
       .then(resolve);
