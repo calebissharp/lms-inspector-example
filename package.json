@@ -21,6 +21,7 @@
     "redux-saga": "^0.15.4",
     "redux-thunk": "^2.2.0",
     "reselect": "^3.0.1",
+    "text-encoding": "^0.6.4",
     "unzip": "^0.1.11",
     "zip": "^1.2.0"
   },
