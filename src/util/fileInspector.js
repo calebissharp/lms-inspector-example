@@ -34,11 +34,7 @@ export const FileInspector = {
   },
   uncompressZip: arrayBuffer => new Promise((resolve, reject) => {
     const zip = new JSZip();
-    zip.loadAsync(arrayBuffer).then(() => {
-      const files = [];
-      zip.forEach((_, f) => files.push(f.name));
-      resolve(files);
-    });
+    zip.loadAsync(arrayBuffer).then(() => resolve(Object.keys(zip.files)));
   }),
   uncompressGzip: arrayBuffer => new Promise((resolve, reject) => {
     const uncompressed = pako.inflate(arrayBuffer);
