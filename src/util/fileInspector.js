@@ -35,12 +35,12 @@ export const FileInspector = {
   }),
   uncompressGzip: arrayBuffer => new Promise((resolve, reject) => {
     const uncompressed = pako.inflate(arrayBuffer);
-    const string = new TextDecoder('utf-8').decode(uncompressed)
+    const files = new TextDecoder('utf-8').decode(uncompressed)
       .substring(0, 1300) // take only the first part of the file that contains filenames
       .replace(/\t|\d+|(f|c|d)\t|\?/g, '') // magical regexp to clean up messy uncompressed string
       .split(/\n/g) // split the string into an array of filenames
       .slice(1); // remove big empty first entry
-    resolve(string);
+    resolve(files);
   }),
   checkForLMS: filenames => {
     let result = '';
